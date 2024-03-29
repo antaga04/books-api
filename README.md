@@ -2,7 +2,7 @@
 
 API de libros y reviews. Continiene una lista de libros. Sobre ellos hay reviews hechas por un User autenticado el la base de datos.
 
-API_URL => https://magicbooks.onrender.com/api/portfolios
+API_URL => https://magicbooks.onrender.com/api/books
 
 ## MODELOS
 
@@ -46,7 +46,7 @@ const User = {
 - https://localhost:9000/api
 - https://magicbooks.onrender.com/api
 
-### MODELO PORTFOLIOS:
+### MODELO BOOKS:
 
 | HTTP Request | Endpoint  | Description                       | Protected |
 | ------------ | --------- | --------------------------------- | --------- |
