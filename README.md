@@ -2,7 +2,7 @@
 
 API de libros y reviews. Continiene una lista de libros. Sobre ellos hay reviews hechas por un User autenticado el la base de datos.
 
-API_URL => https://devportfolios.onrender.com/api/portfolios
+API_URL => https://magicbooks.onrender.com/api/portfolios
 
 ## MODELOS
 
@@ -72,7 +72,7 @@ const User = {
 | ------------ | -------------- | --------------------------------- | --------- |
 | GET          | /auth          | comprobar si tiene token válido   | No        |
 | POST         | /auth/login    | Login user                        | No        |
-| POST         | /auth/register | Registrar user (crear).           | Sí        |
+| POST         | /auth/register | Registrar user (crear).           | No        |
 | PUT          | /auth/avatar   | Actualizar user avatar.           | Sí        |
 | PUT          | /auth/         | Actualizar user con bearer token  | Sí        |
 
