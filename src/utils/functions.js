@@ -1,13 +1,7 @@
 const { Book, Review } = require('../api/model/mongo');
 
 const getAllBooksFromDB = async (queryParams) => {
-  const filterOptions = {};
-
-  for (const key in queryParams) {
-    if (queryParams.hasOwnProperty(key)) {
-      filterOptions[key] = { $regex: new RegExp(queryParams[key], 'i') };
-    }
-  }
+  const filterOptions = getFilterOptions(queryParams);
 
   try {
     const books = await Book.find(filterOptions);
@@ -18,13 +12,7 @@ const getAllBooksFromDB = async (queryParams) => {
 };
 
 const getAllReviewsFromDB = async (queryParams) => {
-  const filterOptions = {};
-
-  for (const key in queryParams) {
-    if (queryParams.hasOwnProperty(key)) {
-      filterOptions[key] = { $regex: new RegExp(queryParams[key], 'i') };
-    }
-  }
+  const filterOptions = getFilterOptions(queryParams);
 
   try {
     const reviews = await Review.find(filterOptions).populate([
@@ -35,6 +23,18 @@ const getAllReviewsFromDB = async (queryParams) => {
   } catch (error) {
     throw new Error(`Error fetching reviews: ${error.message}`);
   }
+};
+
+const getFilterOptions = (queryParams) => {
+  const filterOptions = {};
+
+  for (const key in queryParams) {
+    if (queryParams.hasOwnProperty(key)) {
+      filterOptions[key] = { $regex: new RegExp(queryParams[key], 'i') };
+    }
+  }
+
+  return filterOptions;
 };
 
 module.exports = {

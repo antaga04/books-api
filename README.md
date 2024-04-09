@@ -41,7 +41,7 @@ const User = {
 2. La imagen del Screenshot admite un peso máximo de 1mb.
 3. La imagen se sube como archivo. Esta se guardará en Cloudinary automáticamente.
 
-## Endpoints:
+## URLs:
 
 - https://localhost:9000/api
 - https://magicbooks.onrender.com/api

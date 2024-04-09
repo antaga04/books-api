@@ -1,4 +1,4 @@
-const { verifytoken } = require('../config/jwt');
+const { verifytoken } = require('../utils/jwt');
 
 const hasValidAuthJwt = (req, res, next) => {
   try {
